@@ -3371,6 +3371,7 @@ return [
             'cannot-change'      => 'Kullanıcı değiştirilemez.',
             'create-success'     => 'Kullanıcı başarıyla oluşturuldu.',
             'delete-failed'      => 'Kullanıcı silme başarısız.',
+            'delete-self-error'  => 'Kendi hesabınızı silemezsiniz.',
             'delete-success'     => 'Kullanıcı başarıyla silindi.',
             'delete-warning'     => 'Bu işlemi gerçekleştirmek istediğinizden emin misiniz?',
             'incorrect-password' => 'Yanlış şifre',
@@ -3734,6 +3735,40 @@ return [
                         'redirection-link'  => 'Yönlendirme Bağlantısı',
                     ],
 
+                    'speculation-rules' => [
+                        'enable-speculation' => 'Spekülasyon Kurallarını Etkinleştir',
+                        'info'               => 'Otomatik spekülasyon mantığını etkinleştirmek veya devre dışı bırakmak için ayarları yapılandırın.',
+                        'title'              => 'Spekülasyon Kuralları',
+
+                        'prerender' => [
+                            'conservative'           => 'Muhafazakar',
+                            'eager'                  => 'İstekli',
+                            'eagerness'              => 'Prerender İsteklilik Seviyesi',
+                            'eagerness-info'         => 'Spekülasyon kurallarının ne kadar agresif uygulanacağını kontrol eder. Seçenekler: istekli (maksimum), ılımlı (varsayılan), muhafazakar (düşük).',
+                            'enabled'                => 'Prerender Spekülasyon Kurallarını Etkinleştir',
+                            'ignore-url-params'      => 'Prerender URL Parametrelerini Yoksay',
+                            'ignore-url-params-info' => 'Spekülasyon kurallarında yoksayılacak URL parametrelerini belirtin. Birden çok parametreyi ayırmak için boru işareti (|) kullanın.',
+                            'ignore-urls'            => 'Prerender URL\'lerini Yoksay',
+                            'ignore-urls-info'       => 'Spekülasyon mantığından hariç tutulacak URL\'leri girin. Birden çok URL\'yi boru işareti (|) ile ayırın.',
+                            'info'                   => 'Spekülasyon kuralları durumunu ayarla.',
+                            'moderate'               => 'Ilımlı',
+                        ],
+
+                        'prefetch' => [
+                            'conservative'           => 'Muhafazakar',
+                            'eager'                  => 'İstekli',
+                            'eagerness'              => 'Prefetch İsteklilik Seviyesi',
+                            'eagerness-info'         => 'Spekülasyon kurallarının ne kadar agresif uygulanacağını kontrol eder. Seçenekler: istekli (maksimum), ılımlı (varsayılan), muhafazakar (düşük).',
+                            'enabled'                => 'Prefetch Spekülasyon Kurallarını Etkinleştir',
+                            'ignore-url-params'      => 'Prefetch URL Parametrelerini Yoksay',
+                            'ignore-url-params-info' => 'Spekülasyon kurallarında yoksayılacak URL parametrelerini belirtin. Birden çok parametreyi ayırmak için boru işareti (|) kullanın.',
+                            'ignore-urls'            => 'Prefetch URL\'lerini Yoksay',
+                            'ignore-urls-info'       => 'Spekülasyon mantığından hariç tutulacak URL\'leri girin. Birden çok URL\'yi boru işareti (|) ile ayırın.',
+                            'info'                   => 'Spekülasyon kuralları durumunu ayarla.',
+                            'moderate'               => 'Ilımlı',
+                        ],
+                    ],
+
                     'custom-scripts' => [
                         'custom-css'        => 'Özel CSS',
                         'custom-javascript' => 'Özel Javascript',
@@ -3853,6 +3888,49 @@ return [
                     ],
                 ],
 
+                'gdpr' => [
+                    'title' => 'GDPR',
+                    'info'  => 'GDPR Uyumluluk Ayarları',
+
+                    'settings' => [
+                        'title'   => 'GDPR Uyumluluk Ayarları',
+                        'info'    => 'Gizlilik politikası dahil olmak üzere GDPR uyumluluk ayarlarını yönetin. Gereksinimlere göre GDPR özelliklerini etkinleştirin veya devre dışı bırakın.',
+                        'enabled' => 'GDPR\'yi Etkinleştir',
+                    ],
+
+                    'agreement' => [
+                        'title'          => 'GDPR Anlaşması',
+                        'info'           => 'GDPR düzenlemelerine uygun olarak müşteri onayını yönetin. Veri toplama ve işleme için gerekli onayı etkinleştirin.',
+                        'enable'         => 'Müşteri Onayını Etkinleştir',
+                        'checkbox-label' => 'Onay için Etiket',
+                        'content'        => 'Onay İçeriği',
+                    ],
+
+                    'cookie' => [
+                        'bottom-left'  => 'Alt Sol',
+                        'bottom-right' => 'Alt Sağ',
+                        'center'       => 'Merkez',
+                        'description'  => 'Açıklama',
+                        'enable'       => 'Çerez Bildirimini Etkinleştir',
+                        'identifier'   => 'Statik Blok ID',
+                        'info'         => 'Kullanıcıları veri toplama ve gizlilik politikası hakkında bilgilendirmek için çerez onay ayarlarını yapılandırın.',
+                        'position'     => 'Çerez Blok Konumu',
+                        'title'        => 'Çerez Bildirim Ayarları',
+                        'top-left'     => 'Üst Sol',
+                        'top-right'    => 'Üst Sağ',
+                    ],
+
+                    'cookie-consent' => [
+                        'title'                  => 'Çerez Ayarlarını Yönet',
+                        'info'                   => 'Veri kullanımı yönetimi için tercih edilen çerez ayarlarını seçin. Farklı çerez türleri için onay ayarlarını yapılandırın.',
+                        'strictly-necessary'     => 'Kesinlikle Gerekli',
+                        'basic-interaction'      => 'Temel Etkileşim ve İşlevsellik',
+                        'experience-enhancement' => 'Deneyim Geliştirme',
+                        'measurement'            => 'Ölçüm',
+                        'targeting-advertising'  => 'Hedefleme ve Reklam',
+                    ],
+                ],
+
                 'sitemap' => [
                     'info'  => 'Site haritası seçeneklerini ayarlayın.',
                     'title' => 'Site Haritası',
@@ -3869,49 +3947,6 @@ return [
                         'max-url-per-file' => 'Dosya başına maksimum URL sayısı',
                         'title'            => 'Dosya Limitleri',
                     ],
-                ],
-            ],
-
-            'gdpr' => [
-                'title' => 'GDPR',
-                'info'  => 'GDPR Uyumluluk Ayarları',
-
-                'settings' => [
-                    'title'   => 'GDPR Uyumluluk Ayarları',
-                    'info'    => 'Gizlilik politikası dahil olmak üzere GDPR uyumluluk ayarlarını yönetin. Gereksinimlere göre GDPR özelliklerini etkinleştirin veya devre dışı bırakın.',
-                    'enabled' => 'GDPR\'yi Etkinleştir',
-                ],
-
-                'agreement' => [
-                    'title'          => 'GDPR Anlaşması',
-                    'info'           => 'GDPR düzenlemelerine uygun olarak müşteri onayını yönetin. Veri toplama ve işleme için gerekli onayı etkinleştirin.',
-                    'enable'         => 'Müşteri Onayını Etkinleştir',
-                    'checkbox-label' => 'Onay için Etiket',
-                    'content'        => 'Onay İçeriği',
-                ],
-
-                'cookie' => [
-                    'bottom-left'  => 'Alt Sol',
-                    'bottom-right' => 'Alt Sağ',
-                    'center'       => 'Merkez',
-                    'description'  => 'Açıklama',
-                    'enable'       => 'Çerez Bildirimini Etkinleştir',
-                    'identifier'   => 'Statik Blok ID',
-                    'info'         => 'Kullanıcıları veri toplama ve gizlilik politikası hakkında bilgilendirmek için çerez onay ayarlarını yapılandırın.',
-                    'position'     => 'Çerez Blok Konumu',
-                    'title'        => 'Çerez Bildirim Ayarları',
-                    'top-left'     => 'Üst Sol',
-                    'top-right'    => 'Üst Sağ',
-                ],
-
-                'cookie-consent' => [
-                    'title'                  => 'Çerez Ayarlarını Yönet',
-                    'info'                   => 'Veri kullanımı yönetimi için tercih edilen çerez ayarlarını seçin. Farklı çerez türleri için onay ayarlarını yapılandırın.',
-                    'strictly-necessary'     => 'Kesinlikle Gerekli',
-                    'basic-interaction'      => 'Temel Etkileşim ve İşlevsellik',
-                    'experience-enhancement' => 'Deneyim Geliştirme',
-                    'measurement'            => 'Ölçüm',
-                    'targeting-advertising'  => 'Hedefleme ve Reklam',
                 ],
             ],
 

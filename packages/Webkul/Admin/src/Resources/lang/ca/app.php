@@ -3371,6 +3371,7 @@ return [
             'cannot-change'      => 'No es pot canviar l\'usuari.',
             'create-success'     => 'Usuari creat amb éxit.',
             'delete-failed'      => 'Error en eliminar l\'usuari.',
+            'delete-self-error'  => 'No pots suprimir el teu propi compte.',
             'delete-success'     => 'Usuari eliminat amb éxit.',
             'delete-warning'     => 'Estàs segur que vols realitzar aquesta acció?',
             'incorrect-password' => 'Contrasenya incorrecta',
@@ -3731,6 +3732,40 @@ return [
                         'offer-title'       => 'Títol de l\'Oferta',
                         'redirection-title' => 'Títol de Redirecció',
                         'redirection-link'  => 'Enllaç de Redirecció',
+                    ],
+
+                    'speculation-rules' => [
+                        'enable-speculation' => 'Habilita les regles d’especulació',
+                        'info'               => 'Configura els paràmetres per habilitar o deshabilitar la lògica automàtica d’especulació.',
+                        'title'              => 'Regles d’especulació',
+
+                        'prerender' => [
+                            'conservative'           => 'Conservador',
+                            'eager'                  => 'Entusiasta',
+                            'eagerness'              => 'Nivell d’entusiasme de prerender',
+                            'eagerness-info'         => 'Controla com s’apliquen d’agressivament les regles d’especulació. Opcions: entusiasta (màxim), moderat (per defecte), conservador (baix).',
+                            'enabled'                => 'Habilita les regles d’especulació de prerender',
+                            'ignore-url-params'      => 'Ignora els paràmetres d’URL de prerender',
+                            'ignore-url-params-info' => 'Especifica els paràmetres d’URL a ignorar en les regles d’especulació. Usa la barra vertical (|) per separar diversos paràmetres.',
+                            'ignore-urls'            => 'Ignora els URL de prerender',
+                            'ignore-urls-info'       => 'Introdueix els URL que s’han d’excloure de la lògica d’especulació. Separa múltiples URL amb la barra vertical (|).',
+                            'info'                   => 'Configura l’estat de les regles d’especulació.',
+                            'moderate'               => 'Moderat',
+                        ],
+
+                        'prefetch' => [
+                            'conservative'           => 'Conservador',
+                            'eager'                  => 'Entusiasta',
+                            'eagerness'              => 'Nivell d’entusiasme de prefetch',
+                            'eagerness-info'         => 'Controla com s’apliquen d’agressivament les regles d’especulació. Opcions: entusiasta (màxim), moderat (per defecte), conservador (baix).',
+                            'enabled'                => 'Habilita les regles d’especulació de prefetch',
+                            'ignore-url-params'      => 'Ignora els paràmetres d’URL de prefetch',
+                            'ignore-url-params-info' => 'Especifica els paràmetres d’URL a ignorar en les regles d’especulació. Usa la barra vertical (|) per separar diversos paràmetres.',
+                            'ignore-urls'            => 'Ignora els URL de prefetch',
+                            'ignore-urls-info'       => 'Introdueix els URL que s’han d’excloure de la lògica d’especulació. Separa múltiples URL amb la barra vertical (|).',
+                            'info'                   => 'Configura l’estat de les regles d’especulació.',
+                            'moderate'               => 'Moderat',
+                        ],
                     ],
 
                     'custom-scripts' => [
